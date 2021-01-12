@@ -39,8 +39,13 @@ namespace Prime
 
             DateTime d2 = DateTime.Now;
             var ts = d2 - d1;
-            lblTime.Text = ts.ToString();
+            lblTime.Text = getTimeStr(ts);
             this.Cursor = Cursors.Default;
+        }
+
+        private string getTimeStr(TimeSpan ts)
+        {
+            return ts.ToString(@"mm\:ss\.fff");
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -111,7 +116,8 @@ namespace Prime
 
             DateTime d2 = DateTime.Now;
             var ts = d2 - d1;
-            lblTime.Text = ts.ToString();
+            lblTime.Text = getTimeStr(ts);
+
             this.Cursor = Cursors.Default;
         }
 
